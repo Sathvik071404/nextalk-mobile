@@ -4,6 +4,12 @@ NexTalk Mobile is an Android-first offline messaging application built with Expo
 
 The app enables direct device-to-device communication without requiring user accounts, cloud servers, or message storage. Communication occurs through nearby peer discovery and encrypted peer-to-peer connections, with automatic same-Wi-Fi fallback support.
 
+## Download
+
+Download the latest Android APK from the Releases page.
+
+Current release: v1.2.1
+
 ## Features
 
 * Offline peer-to-peer messaging
