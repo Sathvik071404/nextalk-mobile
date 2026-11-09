@@ -2,9 +2,9 @@
 
 ## Project Website
 
-Live site: https://sathvik071404.github.io/nextalk-mobile/
+The portfolio source is in `website/`; open `website/index.html` for a local preview. To publish it, select **Settings > Pages > GitHub Actions** in this repository, then run the **Deploy project website** workflow from the Actions tab. After a successful deployment, it will be available at https://sathvik071404.github.io/nextalk-mobile/.
 
-For a local preview, open `website/index.html` in a browser. GitHub Pages deploys the static site from `website/` whenever changes are pushed to `main`. The latest published APK is v1.2.1; current source is v1.2.3 and has not been published as an APK.
+The latest published APK is v1.2.1; current source is v1.2.3 and has not been published as an APK.
 
 NexTalk Mobile is an Android-first offline messaging application built with Expo, React Native, and Expo Router.
 
