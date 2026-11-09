@@ -2,7 +2,7 @@
 
 ## Project Website
 
-The portfolio source is in `website/`; open `website/index.html` for a local preview. To publish it, select **Settings > Pages > GitHub Actions** in this repository, then run the **Deploy project website** workflow from the Actions tab. After a successful deployment, it will be available at https://sathvik071404.github.io/nextalk-mobile/.
+The portfolio source is in `website/`; open `website/index.html` for a local preview. The **Deploy project website** workflow configures GitHub Pages automatically and publishes the site to https://sathvik071404.github.io/nextalk-mobile/.
 
 The latest published APK is v1.2.1; current source is v1.2.3 and has not been published as an APK.
 
