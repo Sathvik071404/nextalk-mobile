@@ -146,17 +146,19 @@ This data must only live in memory. Restarting the backend should erase every ro
 8. On participant leave/disconnect, start a 60-second wipe timer.
 9. If timeout finishes, delete the local room and local messages.
 
-## Security Direction
+## Security Direction and Current Limitations
 
-The best privacy version is end-to-end encryption:
+The long-term goal is authenticated, end-to-end encryption. The following are design goals, not claims that the current prototype meets them:
 
-- The transport sends encrypted message payloads.
+- All chat and control payloads are encrypted in transit.
 - No relay or peer transport layer should need plaintext message text.
 - Encryption keys are generated per chat session.
 - Keys are stored only in app memory.
-- Keys are destroyed when the chat ends or the app closes.
+- Session keys are cleared from active session state when the chat ends or the app closes.
 
-The current prototype implements this direction with Android ECDH/AES-GCM session keys. It still must not persist messages, keys, or message-body logs, and the cryptographic implementation should receive a formal review before any production claim.
+The Android prototype uses ECDH/AES-GCM for session payloads, but the supplied static assessment identified an unauthenticated same-Wi-Fi key exchange, client-controlled endpoint identity, unbounded LAN connection handling, and plaintext acceptance paths. Peer identity verification is not enforced by the app. Do not use this prototype for sensitive conversations or make production security claims until the findings are fixed and independently tested.
+
+See the README's Security Assessment section for the findings and prioritized remediation checklist. The assessment was a white-box static review; the native module was not built or exercised in a runtime penetration test.
 
 ## Leave And Wipe Rule
 
@@ -209,7 +211,7 @@ Build this in phases:
 
 5. Add encryption.
    - Generate per-chat keys in app memory and destroy them when the room ends.
-   - Status: ECDH key agreement, AES-GCM encrypted payloads, live fingerprints, and key destruction on disconnect are implemented in local Android source; physical testing and a security review are still pending.
+   - Status: Experimental ECDH/AES-GCM session payload encryption exists in local Android source. A supplied static assessment found authentication and encryption-enforcement gaps; see the README Security Assessment and resolve those before relying on encryption claims.
 
 6. Optional LAN fallback.
    - Build a native same-Wi-Fi/hotspot transport only if Nearby Connections remains unreliable for demo phones.

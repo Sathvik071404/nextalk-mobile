@@ -2,7 +2,7 @@
   "expo": {
     "name": "NexTalk Mobile",
     "slug": "nextalk",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "nextalk",
@@ -12,7 +12,7 @@
     },
     "android": {
       "package": "com.nextalk.mobile",
-      "versionCode": 19,
+      "versionCode": 20,
       "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#030318",

@@ -4,13 +4,13 @@ plugins {
 }
 
 group = 'expo.modules.nextalknearby'
-version = '1.2.2'
+version = '1.2.3'
 
 android {
   namespace "expo.modules.nextalknearby"
   defaultConfig {
-    versionCode 19
-    versionName "1.2.2"
+    versionCode 20
+    versionName "1.2.3"
   }
   lintOptions {
     abortOnError false

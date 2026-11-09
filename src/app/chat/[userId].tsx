@@ -224,7 +224,7 @@ export default function ChatScreen() {
         id: createId(),
         text: isDemoChat
           ? 'Presentation fallback chat opened. This simulates the chat flow on one phone only.'
-          : 'Private peer connection established. An end-to-end encryption key is being prepared for this session.',
+          : 'Experimental session encryption is being prepared. Verify the pairing code on both devices; peer identity is not guaranteed.',
         senderId: null,
         senderName: 'NexTalk',
         timestamp: new Date().toISOString(),
@@ -551,7 +551,7 @@ export default function ChatScreen() {
             {isDemoChat
               ? `Local demo session ${sessionKeyFingerprint}`
               : secureSession.active
-                ? `End-to-end encrypted ${secureSession.fingerprint}`
+                ? `Experimental encryption · peer unverified ${secureSession.fingerprint}`
                 : 'Securing peer-to-peer session...'}
           </Text>
         </View>
