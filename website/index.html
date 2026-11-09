@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#081018" />
+    <meta name="description" content="NexTalk Mobile is a college-built Android prototype exploring nearby peer-to-peer messaging without internet access." />
+    <meta property="og:title" content="NexTalk Mobile" />
+    <meta property="og:description" content="An Android prototype exploring nearby messaging without internet access." />
+    <meta property="og:type" content="website" />
+    <title>NexTalk Mobile | Nearby messaging prototype</title>
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="NexTalk home">
+        <img src="./assets/images/brand.png" alt="" />
+        <span>NexTalk</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#technology">Technology</a>
+        <a class="nav-github" href="https://github.com/Sathvik071404/nextalk-mobile" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" id="main-content" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> ANDROID · COLLEGE PROJECT · OPEN SOURCE</p>
+          <h1 id="hero-title">NexTalk<br /><em>Mobile</em></h1>
+          <p class="intro">A college-built Android prototype exploring how nearby people could message when internet access is unavailable.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/Sathvik071404/nextalk-mobile/releases/latest" target="_blank" rel="noreferrer">Get latest APK <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://github.com/Sathvik071404/nextalk-mobile" target="_blank" rel="noreferrer">Browse source <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="release-note">Latest published APK: <strong>v1.2.1</strong> <span>·</span> Source v1.2.3 is not yet released</p>
+        </div>
+
+        <div class="device-stage" aria-label="NexTalk app preview">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="phone">
+            <div class="phone-status"><span>9:41</span><span>● ● ▰</span></div>
+            <div class="phone-head">
+              <div><div class="phone-kicker">NEARBY NETWORK</div><h2>Find your people.</h2></div>
+              <span class="scan-state"><i></i> Preview</span>
+            </div>
+            <div class="radar">
+              <span class="radar-ring ring-a"></span><span class="radar-ring ring-b"></span><span class="radar-ring ring-c"></span>
+              <span class="radar-center"><img src="./assets/images/brand.png" alt="" /></span>
+              <span class="radar-point point-a"></span><span class="radar-point point-b"></span>
+            </div>
+            <div class="phone-foot"><span class="wifi-mark" aria-hidden="true">⌁</span><div><strong>Nearby discovery</strong><small>Interface concept</small></div><span class="arrow" aria-hidden="true">↗</span></div>
+          </div>
+          <div class="stage-caption"><span class="caption-line"></span> CONNECTIONS, WITHOUT THE CLOUD</div>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Project highlights">
+        <div><strong>01</strong><span>Nearby discovery</span></div>
+        <div><strong>02</strong><span>Session-based chats</span></div>
+        <div><strong>03</strong><span>Android + Kotlin</span></div>
+        <div><strong>04</strong><span>College prototype</span></div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-label"><span>01 / THE IDEA</span><span class="label-rule"></span></div>
+        <div class="about-grid">
+          <h2>When the network<br />goes quiet, <em>stay close.</em></h2>
+          <div class="about-body">
+            <p>NexTalk is an Android messaging prototype built with Expo, React Native, and a native Kotlin transport. It explores Google Nearby Connections and a same-Wi-Fi discovery fallback without a cloud chat server.</p>
+            <p>Display names and conversations are temporary. Pairing codes are intended for manual comparison, but they are not yet enforced as cryptographic identity verification.</p>
+            <div class="status-note"><span class="status-icon" aria-hidden="true">!</span><span><strong>Prototype security</strong><br />A source-based assessment reported open peer-authentication, plaintext-handling, endpoint-identity, and connection-limit issues. It was not a runtime penetration test. Don’t use this prototype for sensitive messages. <a href="https://github.com/Sathvik071404/nextalk-mobile#security-assessment" target="_blank" rel="noreferrer">Read the assessment notes ↗</a></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="technology section" id="technology">
+        <div class="section-label"><span>02 / UNDER THE HOOD</span><span class="label-rule"></span></div>
+        <div class="tech-heading"><h2>Built to work<br />close to the device.</h2><p>One project, two layers: a mobile interface and a native Android transport.</p></div>
+        <div class="tech-list">
+          <article><span class="tech-index">A</span><div><h3>Mobile experience</h3><p>Expo · React Native · Expo Router · TypeScript</p></div><span class="tech-mark">UI</span></article>
+          <article><span class="tech-index">B</span><div><h3>Nearby transport</h3><p>Google Nearby Connections · Android NSD · TCP sockets · Kotlin</p></div><span class="tech-mark">P2P</span></article>
+          <article><span class="tech-index">C</span><div><h3>Experimental session encryption</h3><p>ECDH key agreement · AES-GCM payloads · identity verification and enforcement gaps remain</p></div><span class="tech-mark">WIP</span></article>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div><p class="eyebrow">A STUDY IN RESILIENT COMMUNICATION</p><h2>Made for the moments<br />the signal isn’t.</h2></div>
+        <a class="button button-light" href="https://github.com/Sathvik071404/nextalk-mobile" target="_blank" rel="noreferrer">View project on GitHub <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer><a class="footer-brand" href="#home">NexTalk</a><span>Android-first offline messaging prototype</span><a href="https://github.com/Sathvik071404/nextalk-mobile" target="_blank" rel="noreferrer">Source on GitHub ↗</a><small>© 2026 NexTalk Mobile</small></footer>
+  </body>
+</html>
